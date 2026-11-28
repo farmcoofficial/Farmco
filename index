@@ -1,0 +1,3323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> FARM CO. | Inspired by Nature. For Climate. For Our Future.</title>
+  <meta name="description" content="FARM CO. is an experiential farming and agriculture-learning platform in India connecting urban communities, schools, families, and corporates with real farms and farmers." />
+  <meta name="keywords" content="FARM CO., experiential farming India, agritourism Bengaluru, farm visits Karnataka, sustainable agriculture workshops, support Indian farmers, school farm trips, corporate farm retreat" />
+  <meta name="author" content="Chandana V, FARM CO." />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="FARM CO. — Reconnect With Nature. Experience Farming." />
+  <meta property="og:description" content="Inspired by Nature. For Climate. For Our Future. Book authentic farm experiences or partner your farm with us." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1753123198359-e69454f63a5c?auto=format&fit=crop&w=1600&q=80" />
+
+  <!-- Google Fonts: Editorial Serif + Modern Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       1. DESIGN TOKENS & BASE STYLES
+       ========================================================================== */
+    :root {
+      --forest-950: #0F2318;
+      --forest-900: #173325;
+      --forest-800: #1E4230;
+      --forest-700: #2C5A42;
+      --sage-500:   #4E745B;
+      --sage-200:   #D9E4DC;
+      --earth-800:  #523629;
+      --earth-600:  #734C3A;
+      --earth-400:  #A2745C;
+      --cream-50:   #FAF7F0;
+      --cream-100:  #F3EDE0;
+      --beige-200:  #E7DEC9;
+      --white:      #FFFFFF;
+      --ink-900:    #1A211D;
+      --ink-700:    #414D46;
+      --ink-500:    #6A776F;
+      --border:     rgba(23, 51, 37, 0.12);
+
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans:  'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+      --radius-sm:  10px;
+      --radius-md:  16px;
+      --radius-lg:  22px;
+      --radius-xl:  32px;
+
+      --shadow-sm:  0 6px 20px rgba(15, 35, 24, 0.05);
+      --shadow-md:  0 14px 36px rgba(15, 35, 24, 0.08);
+      --shadow-lg:  0 24px 56px rgba(15, 35, 24, 0.14);
+
+      --transition: 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+      --container:  1220px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 86px;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--ink-900);
+      background-color: var(--cream-50);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+      font-size: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section {
+      padding: 96px 0;
+      position: relative;
+    }
+
+    .section--cream { background-color: var(--cream-50); }
+    .section--beige { background-color: var(--cream-100); }
+    .section--white { background-color: var(--white); }
+    .section--forest {
+      background-color: var(--forest-900);
+      color: var(--cream-50);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--earth-600);
+      margin-bottom: 14px;
+    }
+
+    .section--forest .eyebrow {
+      color: var(--sage-200);
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 24px;
+      height: 1.5px;
+      background: currentColor;
+      display: inline-block;
+    }
+
+    h1, h2, h3, .serif {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      line-height: 1.12;
+      letter-spacing: -0.01em;
+    }
+
+    h2.section-title {
+      font-size: clamp(2.1rem, 4vw, 3.2rem);
+      color: var(--forest-900);
+      margin-bottom: 18px;
+    }
+
+    .section--forest h2.section-title {
+      color: var(--white);
+    }
+
+    .section-lead {
+      font-size: 1.07rem;
+      color: var(--ink-700);
+      max-width: 660px;
+    }
+
+    .section--forest .section-lead {
+      color: rgba(250, 247, 240, 0.84);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 26px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.94rem;
+      cursor: pointer;
+      border: 1.5px solid transparent;
+      transition: transform var(--transition), background-color var(--transition), color var(--transition), border-color var(--transition), box-shadow var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn:active {
+      transform: translateY(1px);
+    }
+
+    .btn-primary {
+      background-color: var(--forest-900);
+      color: var(--white);
+      box-shadow: 0 8px 20px rgba(23, 51, 37, 0.18);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--forest-800);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(23, 51, 37, 0.25);
+    }
+
+    .btn-light {
+      background-color: var(--cream-50);
+      color: var(--forest-900);
+    }
+
+    .btn-light:hover {
+      background-color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-light {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.55);
+      backdrop-filter: blur(8px);
+    }
+
+    .btn-outline-light:hover {
+      background-color: var(--white);
+      color: var(--forest-900);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--forest-900);
+      border-color: rgba(23, 51, 37, 0.28);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--forest-900);
+      color: var(--white);
+      border-color: var(--forest-900);
+    }
+
+    .btn-earth {
+      background-color: var(--earth-600);
+      color: var(--white);
+    }
+
+    .btn-earth:hover {
+      background-color: var(--earth-800);
+      transform: translateY(-2px);
+    }
+
+    .btn-whatsapp {
+      background-color: #1F7A4C;
+      color: var(--white);
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #18623D;
+      transform: translateY(-2px);
+    }
+
+    .btn-sm {
+      padding: 9px 18px;
+      font-size: 0.85rem;
+    }
+
+    /* Scroll Reveal Animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==========================================================================
+       2. TOP NAVIGATION BAR
+       ========================================================================== */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: background-color var(--transition), box-shadow var(--transition), padding var(--transition);
+      padding: 16px 0;
+    }
+
+    .site-header.scrolled {
+      background-color: rgba(250, 247, 240, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 4px 24px rgba(15, 35, 24, 0.08);
+      padding: 11px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      z-index: 1002;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background-color: var(--forest-900);
+      color: var(--cream-50);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      transition: background-color var(--transition);
+    }
+
+    .site-header:not(.scrolled) .brand-mark {
+      background-color: rgba(15, 35, 24, 0.72);
+      backdrop-filter: blur(6px);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .brand-name {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: 1.32rem;
+      letter-spacing: 0.06em;
+      color: var(--white);
+      transition: color var(--transition);
+    }
+
+    .brand-sub {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.82);
+      transition: color var(--transition);
+    }
+
+    .site-header.scrolled .brand-name {
+      color: var(--forest-900);
+    }
+
+    .site-header.scrolled .brand-sub {
+      color: var(--earth-600);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.89rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.92);
+      position: relative;
+      padding: 4px 0;
+      transition: color var(--transition);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1.5px;
+      background: currentColor;
+      transition: width var(--transition);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .site-header.scrolled .nav-links a {
+      color: var(--ink-900);
+    }
+
+    .site-header.scrolled .nav-links a:hover {
+      color: var(--forest-700);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .site-header:not(.scrolled) .nav-cta {
+      background-color: var(--cream-50);
+      color: var(--forest-900);
+    }
+
+    .site-header:not(.scrolled) .nav-cta:hover {
+      background-color: var(--white);
+    }
+
+    .mobile-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      background: rgba(15, 35, 24, 0.45);
+      color: var(--white);
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 1002;
+    }
+
+    .site-header.scrolled .mobile-toggle {
+      color: var(--forest-900);
+      background: var(--cream-100);
+      border-color: var(--border);
+    }
+
+    .mobile-drawer {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--forest-950);
+      color: var(--cream-50);
+      z-index: 1001;
+      padding: 96px 28px 36px;
+      flex-direction: column;
+      justify-content: space-between;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .mobile-drawer.open {
+      display: flex;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .mobile-drawer ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .mobile-drawer a.mobile-link {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 500;
+      display: block;
+      padding: 4px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* ==========================================================================
+       3. HERO SECTION & PLATFORM INTRO
+       ========================================================================== */
+    .hero {
+      position: relative;
+      min-height: 94vh;
+      display: flex;
+      align-items: flex-end;
+      padding: 130px 0 76px;
+      overflow: hidden;
+      background-color: var(--forest-950);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 42%;
+      transform: scale(1.03);
+      transition: transform 8s ease;
+    }
+
+    .hero:hover .hero-bg {
+      transform: scale(1.06);
+    }
+
+    .hero-scrim {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(15, 35, 24, 0.58) 0%, rgba(15, 35, 24, 0.32) 45%, rgba(15, 35, 24, 0.88) 100%),
+        linear-gradient(90deg, rgba(15, 35, 24, 0.72) 0%, rgba(15, 35, 24, 0.25) 65%, transparent 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 820px;
+      color: var(--white);
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 16px;
+      border-radius: 999px;
+      background: rgba(250, 247, 240, 0.14);
+      border: 1px solid rgba(250, 247, 240, 0.28);
+      backdrop-filter: blur(10px);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      color: var(--cream-50);
+    }
+
+    .hero-pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: #98D8AA;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.85rem, 6vw, 4.9rem);
+      font-weight: 600;
+      line-height: 1.04;
+      margin-bottom: 22px;
+      color: var(--white);
+    }
+
+    .hero p.hero-sub {
+      font-size: clamp(1.04rem, 1.5vw, 1.24rem);
+      color: rgba(250, 247, 240, 0.9);
+      max-width: 640px;
+      margin-bottom: 34px;
+      font-weight: 400;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 42px;
+    }
+
+    .hero-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      padding-top: 26px;
+      border-top: 1px solid rgba(250, 247, 240, 0.22);
+    }
+
+    .hero-pillar-label {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--sage-200);
+      margin-bottom: 4px;
+    }
+
+    .hero-pillar-text {
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.92);
+      font-weight: 500;
+    }
+
+    /* Short Introduction Band */
+    .intro-band {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 64px 0;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1.4fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .intro-quote {
+      font-family: var(--font-serif);
+      font-size: clamp(1.75rem, 2.8vw, 2.35rem);
+      color: var(--forest-900);
+      line-height: 1.2;
+    }
+
+    .intro-quote em {
+      color: var(--earth-600);
+      font-style: italic;
+    }
+
+    .intro-copy p {
+      color: var(--ink-700);
+      margin-bottom: 16px;
+      font-size: 1.02rem;
+    }
+
+    .intro-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .intro-tag {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--forest-800);
+      background: var(--cream-100);
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(23, 51, 37, 0.08);
+    }
+
+    /* ==========================================================================
+       4. EXPERIENCES SECTION
+       ========================================================================== */
+    .section-head-split {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+
+    .sample-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border-radius: 12px;
+      background: var(--cream-100);
+      border: 1px solid rgba(115, 76, 58, 0.2);
+      color: var(--earth-800);
+      font-size: 0.84rem;
+      font-weight: 500;
+      margin-bottom: 28px;
+    }
+
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 34px;
+    }
+
+    .filter-btn {
+      padding: 9px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--white);
+      color: var(--ink-700);
+      font-size: 0.87rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .filter-btn:hover {
+      border-color: var(--forest-800);
+      color: var(--forest-900);
+    }
+
+    .filter-btn.active {
+      background: var(--forest-900);
+      color: var(--white);
+      border-color: var(--forest-900);
+    }
+
+    .experiences-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 26px;
+    }
+
+    .exp-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .exp-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .exp-media {
+      position: relative;
+      height: 235px;
+      overflow: hidden;
+      background-color: var(--sage-200);
+    }
+
+    .exp-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .exp-card:hover .exp-media img {
+      transform: scale(1.06);
+    }
+
+    .exp-badge-row {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      right: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      pointer-events: none;
+    }
+
+    .exp-sample-pill {
+      background: rgba(15, 35, 24, 0.78);
+      color: var(--cream-50);
+      backdrop-filter: blur(8px);
+      font-size: 0.71rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 5px 11px;
+      border-radius: 999px;
+    }
+
+    .exp-duration-pill {
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--forest-900);
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 5px 11px;
+      border-radius: 999px;
+    }
+
+    .exp-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .exp-meta {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--earth-600);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .exp-title {
+      font-family: var(--font-serif);
+      font-size: 1.62rem;
+      color: var(--forest-900);
+      margin-bottom: 10px;
+    }
+
+    .exp-desc {
+      color: var(--ink-700);
+      font-size: 0.94rem;
+      margin-bottom: 18px;
+      flex: 1;
+    }
+
+    .exp-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 20px;
+    }
+
+    .exp-chip {
+      font-size: 0.76rem;
+      padding: 4px 10px;
+      border-radius: 8px;
+      background: var(--cream-50);
+      border: 1px solid var(--border);
+      color: var(--ink-700);
+    }
+
+    .exp-footer {
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .exp-loc {
+      font-size: 0.8rem;
+      color: var(--ink-500);
+    }
+
+    /* ==========================================================================
+       5. FOR FARMERS SECTION (CORE PLATFORM PILLAR)
+       ========================================================================== */
+    .farmers-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.12fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .farmers-benefits {
+      display: grid;
+      gap: 14px;
+      margin: 28px 0 32px;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 18px;
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(250, 247, 240, 0.12);
+    }
+
+    .benefit-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: rgba(217, 228, 220, 0.14);
+      color: var(--sage-200);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .benefit-item h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 2px;
+    }
+
+    .benefit-item p {
+      font-size: 0.88rem;
+      color: rgba(250, 247, 240, 0.76);
+    }
+
+    /* Forms Card */
+    .form-card {
+      background: var(--white);
+      color: var(--ink-900);
+      border-radius: var(--radius-xl);
+      padding: 36px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border);
+    }
+
+    .form-card-header {
+      margin-bottom: 24px;
+    }
+
+    .form-card-header h3 {
+      font-size: 1.85rem;
+      color: var(--forest-900);
+      margin-bottom: 6px;
+    }
+
+    .form-card-header p {
+      font-size: 0.92rem;
+      color: var(--ink-500);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-label {
+      font-size: 0.83rem;
+      font-weight: 600;
+      color: var(--forest-900);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 11px 14px;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid rgba(23, 51, 37, 0.18);
+      background: var(--cream-50);
+      color: var(--ink-900);
+      font-size: 0.93rem;
+      transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--forest-800);
+      background: var(--white);
+      box-shadow: 0 0 0 4px rgba(30, 66, 48, 0.08);
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 92px;
+    }
+
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 9px;
+    }
+
+    .check-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 12px;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(23, 51, 37, 0.15);
+      background: var(--cream-50);
+      font-size: 0.84rem;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.2s ease;
+    }
+
+    .check-pill:has(input:checked) {
+      background: var(--sage-200);
+      border-color: var(--forest-800);
+      color: var(--forest-900);
+      font-weight: 600;
+    }
+
+    .check-pill input {
+      accent-color: var(--forest-900);
+    }
+
+    /* File Upload Dropzone */
+    .upload-zone {
+      border: 1.5px dashed rgba(23, 51, 37, 0.3);
+      background: var(--cream-50);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .upload-zone:hover, .upload-zone.dragover {
+      border-color: var(--forest-800);
+      background: var(--sage-200);
+    }
+
+    .upload-zone input {
+      display: none;
+    }
+
+    .upload-preview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(74px, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .upload-thumb {
+      position: relative;
+      height: 70px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .upload-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .upload-thumb button {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(15, 35, 24, 0.8);
+      color: #fff;
+      font-size: 12px;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+    }
+
+    .form-feedback {
+      margin-top: 16px;
+      padding: 18px;
+      border-radius: var(--radius-md);
+      background: #E6F2EA;
+      border: 1px solid #9EC7AD;
+      color: var(--forest-900);
+      display: none;
+    }
+
+    .form-feedback.show {
+      display: block;
+      animation: fadeUp 0.35s ease;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ==========================================================================
+       6. WHY FARM CO.
+       ========================================================================== */
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 1.25fr;
+      gap: 48px;
+      align-items: center;
+      margin-top: 32px;
+    }
+
+    .ecosystem-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .eco-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition);
+    }
+
+    .eco-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .eco-num {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      color: var(--earth-600);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .eco-card h4 {
+      font-size: 1.03rem;
+      color: var(--forest-900);
+      margin-bottom: 6px;
+    }
+
+    .eco-card p {
+      font-size: 0.88rem;
+      color: var(--ink-700);
+    }
+
+    .diff-box {
+      background: var(--forest-900);
+      color: var(--cream-50);
+      border-radius: var(--radius-xl);
+      padding: 38px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .diff-box h3 {
+      font-size: 1.9rem;
+      margin-bottom: 14px;
+      color: var(--white);
+    }
+
+    .diff-list {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .diff-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: 0.95rem;
+      color: rgba(250, 247, 240, 0.88);
+    }
+
+    .diff-check {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: rgba(152, 216, 170, 0.2);
+      color: #98D8AA;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+      font-size: 0.78rem;
+    }
+
+    /* ==========================================================================
+       7. OUR MISSION
+       ========================================================================== */
+    .mission-wrap {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 54px;
+      align-items: center;
+    }
+
+    .mission-media {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      aspect-ratio: 4 / 4.6;
+    }
+
+    .mission-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .mission-caption {
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      padding: 16px 20px;
+      border-radius: var(--radius-md);
+      background: rgba(15, 35, 24, 0.84);
+      backdrop-filter: blur(10px);
+      color: var(--cream-50);
+      font-size: 0.88rem;
+    }
+
+    .mission-points {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .mission-point {
+      padding: 16px;
+      border-radius: var(--radius-md);
+      background: var(--cream-50);
+      border: 1px solid var(--border);
+    }
+
+    .mission-point h4 {
+      font-size: 0.96rem;
+      color: var(--forest-900);
+      margin-bottom: 4px;
+    }
+
+    .mission-point p {
+      font-size: 0.84rem;
+      color: var(--ink-700);
+    }
+
+    /* ==========================================================================
+       8. HOW IT WORKS
+       ========================================================================== */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 42px;
+    }
+
+    .step-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      position: relative;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition);
+    }
+
+    .step-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .step-number {
+      font-family: var(--font-serif);
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: var(--earth-400);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .step-card h3 {
+      font-size: 1.5rem;
+      color: var(--forest-900);
+      margin-bottom: 10px;
+    }
+
+    .step-card p {
+      font-size: 0.92rem;
+      color: var(--ink-700);
+    }
+
+    /* ==========================================================================
+       9. SCHOOLS & CORPORATE PARTNERSHIPS
+       ========================================================================== */
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+      margin-top: 38px;
+    }
+
+    .partner-panel {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      background: var(--white);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .partner-banner {
+      height: 220px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .partner-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .partner-tag {
+      position: absolute;
+      bottom: 14px;
+      left: 18px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(15, 35, 24, 0.85);
+      color: var(--white);
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .partner-content {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .partner-content h3 {
+      font-size: 1.85rem;
+      color: var(--forest-900);
+      margin-bottom: 12px;
+    }
+
+    .partner-bullets {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin: 18px 0 26px;
+      flex: 1;
+    }
+
+    .partner-bullets li {
+      padding-left: 20px;
+      position: relative;
+      font-size: 0.93rem;
+      color: var(--ink-700);
+    }
+
+    .partner-bullets li::before {
+      content: "•";
+      position: absolute;
+      left: 4px;
+      color: var(--earth-600);
+      font-weight: 700;
+    }
+
+    /* ==========================================================================
+       10. CUSTOMER BOOKING SECTION
+       ========================================================================== */
+    .booking-layout {
+      display: grid;
+      grid-template-columns: 0.95fr 1.2fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .booking-info-cards {
+      display: grid;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .info-mini-card {
+      padding: 20px;
+      border-radius: var(--radius-md);
+      background: var(--white);
+      border: 1px solid var(--border);
+    }
+
+    .info-mini-card h4 {
+      font-size: 1rem;
+      color: var(--forest-900);
+      margin-bottom: 4px;
+    }
+
+    .info-mini-card p {
+      font-size: 0.89rem;
+      color: var(--ink-700);
+    }
+
+    /* ==========================================================================
+       11. FOUNDER SECTION
+       ========================================================================== */
+    .founder-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
+      padding: 52px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .founder-emblem {
+      background: linear-gradient(155deg, var(--forest-900) 0%, var(--forest-700) 100%);
+      color: var(--cream-50);
+      border-radius: var(--radius-lg);
+      padding: 42px 28px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .founder-monogram {
+      width: 112px;
+      height: 112px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(250, 247, 240, 0.4);
+      display: grid;
+      place-items: center;
+      font-family: var(--font-serif);
+      font-size: 2.6rem;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .founder-emblem h3 {
+      font-size: 1.8rem;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .founder-role {
+      font-size: 0.84rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sage-200);
+    }
+
+    .founder-loc {
+      margin-top: 16px;
+      font-size: 0.83rem;
+      color: rgba(250, 247, 240, 0.78);
+    }
+
+    .founder-quote {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 2.4vw, 2.05rem);
+      line-height: 1.35;
+      color: var(--forest-900);
+      margin: 18px 0 24px;
+    }
+
+    .founder-sig {
+      font-weight: 700;
+      color: var(--earth-600);
+      font-size: 0.95rem;
+    }
+
+    /* ==========================================================================
+       12. CONTACT & GOOGLE MAPS INTEGRATION
+       ========================================================================== */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 36px;
+      margin-top: 36px;
+    }
+
+    .contact-details-card {
+      background: var(--cream-50);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 34px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .contact-row {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: var(--forest-900);
+      color: var(--cream-50);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .contact-row small {
+      display: block;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-500);
+      font-weight: 600;
+    }
+
+    .contact-row strong, .contact-row a {
+      font-size: 1rem;
+      color: var(--forest-900);
+      font-weight: 600;
+    }
+
+    .map-card {
+      margin-top: 32px;
+      background: var(--cream-50);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 24px;
+    }
+
+    .map-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .map-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .map-tab {
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--white);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--ink-700);
+      cursor: pointer;
+    }
+
+    .map-tab.active {
+      background: var(--forest-900);
+      color: var(--white);
+      border-color: var(--forest-900);
+    }
+
+    .map-frame {
+      width: 100%;
+      height: 340px;
+      border: 0;
+      border-radius: var(--radius-md);
+    }
+
+    /* ==========================================================================
+       13. FOOTER
+       ========================================================================== */
+    .site-footer {
+      background: var(--forest-950);
+      color: rgba(250, 247, 240, 0.82);
+      padding: 72px 0 32px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+      gap: 38px;
+      padding-bottom: 44px;
+      border-bottom: 1px solid rgba(250, 247, 240, 0.14);
+    }
+
+    .footer-brand {
+      font-family: var(--font-serif);
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    .footer-tagline {
+      color: var(--sage-200);
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
+
+    .footer-col h4 {
+      color: var(--white);
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      font-size: 0.9rem;
+    }
+
+    .footer-links a, .footer-links button {
+      color: rgba(250, 247, 240, 0.78);
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      text-align: left;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover, .footer-links button:hover {
+      color: var(--white);
+    }
+
+    .social-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .social-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      border: 1px solid rgba(250, 247, 240, 0.2);
+      display: grid;
+      place-items: center;
+      color: var(--cream-50);
+      transition: background-color 0.2s ease;
+    }
+
+    .social-btn:hover {
+      background: rgba(250, 247, 240, 0.14);
+    }
+
+    .footer-bottom {
+      padding-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.84rem;
+      color: rgba(250, 247, 240, 0.64);
+    }
+
+    .footer-legal {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .footer-legal button {
+      background: none;
+      border: none;
+      color: rgba(250, 247, 240, 0.78);
+      cursor: pointer;
+      font-size: 0.84rem;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* ==========================================================================
+       14. FLOATING WHATSAPP & MODALS (PRIVACY, TERMS, ENQUIRY MANAGER)
+       ========================================================================== */
+    .wa-float {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 950;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: #1B7A4A;
+      color: var(--white);
+      font-weight: 600;
+      font-size: 0.88rem;
+      box-shadow: 0 12px 30px rgba(15, 35, 24, 0.28);
+      transition: transform 0.25s ease, background-color 0.25s ease;
+    }
+
+    .wa-float:hover {
+      background: #15623B;
+      transform: translateY(-3px);
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 35, 24, 0.72);
+      backdrop-filter: blur(6px);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-box {
+      background: var(--white);
+      color: var(--ink-900);
+      width: 100%;
+      max-width: 760px;
+      max-height: 86vh;
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .modal-head {
+      padding: 22px 28px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      background: var(--cream-50);
+    }
+
+    .modal-head h3 {
+      font-size: 1.7rem;
+      color: var(--forest-900);
+    }
+
+    .modal-close {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--white);
+      cursor: pointer;
+      font-size: 1.2rem;
+      display: grid;
+      place-items: center;
+    }
+
+    .modal-body {
+      padding: 26px 28px;
+      overflow-y: auto;
+      font-size: 0.94rem;
+      color: var(--ink-700);
+    }
+
+    .modal-body h4 {
+      color: var(--forest-900);
+      margin: 18px 0 6px;
+      font-size: 1.05rem;
+    }
+
+    .enquiry-record {
+      padding: 16px;
+      border-radius: var(--radius-md);
+      background: var(--cream-50);
+      border: 1px solid var(--border);
+      margin-bottom: 12px;
+    }
+
+    /* ==========================================================================
+       15. RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 1080px) {
+      .nav-links, .nav-actions .nav-cta {
+        display: none;
+      }
+      .mobile-toggle {
+        display: inline-flex;
+      }
+      .experiences-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .farmers-layout, .why-grid, .mission-wrap, .booking-layout, .contact-grid, .intro-grid {
+        grid-template-columns: 1fr;
+      }
+      .founder-card {
+        grid-template-columns: 1fr;
+        padding: 34px;
+      }
+      .steps-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .section {
+        padding: 68px 0;
+      }
+      .hero {
+        min-height: 88vh;
+        padding: 112px 0 54px;
+      }
+      .hero-pillars {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .experiences-grid, .partners-grid, .steps-grid, .ecosystem-grid, .mission-points, .form-grid, .checkbox-grid, .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .form-card {
+        padding: 24px 20px;
+      }
+      .wa-float span {
+        display: none;
+      }
+      .wa-float {
+        padding: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======================================================================
+       NAVIGATION BAR
+       ====================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand" aria-label="FARM CO. Home">
+        <div class="brand-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22v-9" />
+            <path d="M12 13C7 13 4 9.5 4 5c4.5 0 8 3 8 8Z" />
+            <path d="M12 15c5 0 8-3.5 8-8-4.5 0-8 3-8 8Z" />
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">FARM CO.</span>
+          <span class="brand-sub">Nature · Climate · Future</span>
+        </div>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#experiences">Experiences</a></li>
+          <li><a href="#for-farmers">For Farmers</a></li>
+          <li><a href="#for-schools">For Schools</a></li>
+          <li><a href="#corporate">Corporate</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#booking" class="btn btn-primary btn-sm nav-cta">Book an Experience</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <ul>
+      <li><a href="#home" class="mobile-link">Home</a></li>
+      <li><a href="#experiences" class="mobile-link">Experiences</a></li>
+      <li><a href="#for-farmers" class="mobile-link">For Farmers</a></li>
+      <li><a href="#for-schools" class="mobile-link">For Schools</a></li>
+      <li><a href="#corporate" class="mobile-link">Corporate</a></li>
+      <li><a href="#about" class="mobile-link">About Us</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+    <div>
+      <a href="#booking" class="btn btn-light" style="width:100%;" id="mobileBookBtn">Book an Experience</a>
+      <p style="margin-top:16px; font-size:0.82rem; color:rgba(250,247,240,0.7); text-align:center;">
+        Inspired by Nature. For Climate. For Our Future.
+      </p>
+    </div>
+  </div>
+
+  <main>
+    <!-- ====================================================================
+         HERO SECTION
+         ==================================================================== -->
+    <section class="hero" id="home">
+      <img
+        src="https://images.unsplash.com/photo-1753123198359-e69454f63a5c?auto=format&fit=crop&w=2000&q=80"
+        alt="Indian farmer walking through a vibrant lush green rice field in Karnataka, India"
+        class="hero-bg"
+      />
+      <div class="hero-scrim"></div>
+
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-pill">
+            <span class="hero-pill-dot"></span>
+            Inspired by Nature. For Climate. For Our Future.
+          </div>
+          <h1>Reconnect With Nature. Experience Farming.</h1>
+          <p class="hero-sub">
+            Discover the beauty of farming through real farm experiences, hands-on learning, meaningful connections and unforgettable moments in nature.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#experiences" class="btn btn-light">
+              Explore Farm Experiences
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="#for-farmers" class="btn btn-outline-light">
+              Partner With Us
+            </a>
+          </div>
+
+          <div class="hero-pillars">
+            <div>
+              <div class="hero-pillar-label">For Explorers &amp; Learners</div>
+              <div class="hero-pillar-text">Curated farm visits, workshops &amp; rural stays</div>
+            </div>
+            <div>
+              <div class="hero-pillar-label">For Indian Farmers</div>
+              <div class="hero-pillar-text">Direct urban reach &amp; dignified new income</div>
+            </div>
+            <div>
+              <div class="hero-pillar-label">For Schools &amp; Corporates</div>
+              <div class="hero-pillar-text">Outdoor education, ESG &amp; digital detox</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SHORT INTRODUCTION BAND
+         ==================================================================== -->
+    <section class="intro-band">
+      <div class="container intro-grid reveal">
+        <div class="intro-quote">
+          Experiencing agriculture firsthand — <em>not just reading about it on a screen.</em>
+        </div>
+        <div class="intro-copy">
+          <p>
+            <strong>Farm Co.</strong> is an experiential farming and agriculture-learning platform that connects urban families, students, schools, and organisations directly with real Indian farms and farmers.
+          </p>
+          <p>
+            Through hands-on sowing and harvesting, sustainable farming workshops, rural village stays, and immersive field programs, we create unforgettable nature experiences while unlocking meaningful new income streams for farming communities.
+          </p>
+          <div class="intro-tags">
+            <span class="intro-tag">Hands-On Learning</span>
+            <span class="intro-tag">Farmer Livelihoods</span>
+            <span class="intro-tag">Sustainable Agriculture</span>
+            <span class="intro-tag">Bengaluru &amp; Across India</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         OUR EXPERIENCES SECTION
+         ==================================================================== -->
+    <section class="section section--cream" id="experiences">
+      <div class="container">
+        <div class="section-head-split reveal">
+          <div>
+            <span class="eyebrow">Our Experiences</span>
+            <h2 class="section-title">Step Onto Real Farms. Learn With Your Hands.</h2>
+            <p class="section-lead">
+              Seven thoughtfully designed pathways to immerse yourself in soil, seasons, biodiversity, and rural hospitality.
+            </p>
+          </div>
+          <a href="#booking" class="btn btn-outline">Request Custom Group Experience</a>
+        </div>
+
+        <div class="sample-notice reveal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <span>
+            <strong>Preview Listings:</strong> The experiences below are illustrative sample programs representing what FARM CO. curates as partner farms are onboarded across Karnataka and India.
+          </span>
+        </div>
+
+        <div class="filter-bar reveal" role="tablist" aria-label="Filter farm experiences">
+          <button class="filter-btn active" data-filter="all">All Experiences (7)</button>
+          <button class="filter-btn" data-filter="hands-on">Visits &amp; Workshops</button>
+          <button class="filter-btn" data-filter="family-stays">Families &amp; Rural Stays</button>
+          <button class="filter-btn" data-filter="institutions">Schools &amp; Corporates</button>
+        </div>
+
+        <!-- Dynamically populated from EXPERIENCES_DATA in JS for easy updates -->
+        <div class="experiences-grid" id="experiencesGrid"></div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         FOR FARMERS — MOST IMPORTANT SECTION
+         ==================================================================== -->
+    <section class="section section--forest" id="for-farmers">
+      <div class="container">
+        <div class="farmers-layout">
+          <div class="reveal">
+            <span class="eyebrow">For Farmers · Partner Network</span>
+            <h2 class="section-title">Your Farm. Your Story. New Opportunities.</h2>
+            <p class="section-lead">
+              Your knowledge of the land is priceless. Farm Co. partners with progressive, natural, and traditional farmers across India to turn agricultural heritage into dignified, steady supplementary income.
+            </p>
+
+            <div class="farmers-benefits">
+              <div class="benefit-item">
+                <div class="benefit-icon">₹</div>
+                <div>
+                  <h4>Generate Additional Income</h4>
+                  <p>Earn directly from curated farm visits, hands-on activities, workshops, and rural homestays—independent of crop price volatility.</p>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div>
+                  <h4>Connect Directly With Urban Visitors</h4>
+                  <p>Welcome respectful families, students, and conscious citizens directly to your land without middlemen.</p>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                </div>
+                <div>
+                  <h4>Host Educational Workshops &amp; Showcase Your Farm</h4>
+                  <p>Share organic composting, seed preservation, millet cultivation, or orchard management while building lasting pride in farming.</p>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </div>
+                <div>
+                  <h4>Earn Through Rural Stays &amp; Farm Hospitality</h4>
+                  <p>We help structure safe visitor itineraries, group scheduling, and authentic farm-to-table hospitality support.</p>
+                </div>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-light" id="focusFarmerFormBtn">
+              Register Your Farm
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+
+          <!-- Farmer Registration Form -->
+          <div class="form-card reveal" id="farmerFormCard">
+            <div class="form-card-header">
+              <h3>Partner Farm Application</h3>
+              <p>Tell us about your farm. Our onboarding team will call you in your preferred language to plan an introductory visit.</p>
+            </div>
+
+            <form id="farmerRegistrationForm" novalidate>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label class="form-label" for="farmerName">Farmer Name *</label>
+                  <input class="form-control" id="farmerName" name="farmerName" type="text" placeholder="e.g., Basavaraj Gowda" required />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="farmerPhone">Phone Number *</label>
+                  <input class="form-control" id="farmerPhone" name="farmerPhone" type="tel" placeholder="10-digit mobile number" required />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="farmLocation">Farm Location (Village / District / State) *</label>
+                  <input class="form-control" id="farmLocation" name="farmLocation" type="text" placeholder="e.g., Ramanagara, Karnataka" required />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="farmSize">Farm Size (Acres) *</label>
+                  <input class="form-control" id="farmSize" name="farmSize" type="text" placeholder="e.g., 4.5 Acres" required />
+                </div>
+
+                <div class="form-group full">
+                  <label class="form-label" for="farmingType">Type of Farming *</label>
+                  <select class="form-control" id="farmingType" name="farmingType" required>
+                    <option value="">Select primary farming practice</option>
+                    <option value="Organic / Natural Farming">Organic / Natural Farming</option>
+                    <option value="Mixed Cropping & Millets">Mixed Cropping &amp; Millets</option>
+                    <option value="Agroforestry / Permaculture">Agroforestry / Permaculture</option>
+                    <option value="Horticulture / Fruit Orchard">Horticulture / Fruit Orchard</option>
+                    <option value="Paddy / Vegetable Cultivation">Paddy / Vegetable Cultivation</option>
+                    <option value="Dairy, Beekeeping & Allied">Dairy, Beekeeping &amp; Allied</option>
+                  </select>
+                </div>
+
+                <div class="form-group full">
+                  <span class="form-label">Available Activities (Select all that apply) *</span>
+                  <div class="checkbox-grid" id="farmerActivities">
+                    <label class="check-pill"><input type="checkbox" value="Guided Farm Walks" /> Guided Farm Walks</label>
+                    <label class="check-pill"><input type="checkbox" value="Seed Sowing & Harvesting" /> Sowing &amp; Harvesting</label>
+                    <label class="check-pill"><input type="checkbox" value="Composting & Organic Workshops" /> Organic Workshops</label>
+                    <label class="check-pill"><input type="checkbox" value="Rural Homestay" /> Rural Homestay</label>
+                    <label class="check-pill"><input type="checkbox" value="School & Student Visits" /> School &amp; Student Visits</label>
+                    <label class="check-pill"><input type="checkbox" value="Traditional Farm Meals" /> Traditional Farm Meals</label>
+                  </div>
+                </div>
+
+                <div class="form-group full">
+                  <label class="form-label" for="farmPhotos">Upload Farm Photographs (Optional, up to 5 images)</label>
+                  <label class="upload-zone" id="uploadDropzone" for="farmPhotos">
+                    <input type="file" id="farmPhotos" accept="image/*" multiple />
+                    <div style="font-weight:600; color:var(--forest-900); font-size:0.9rem;">Click to select or drag &amp; drop farm photos</div>
+                    <div style="font-size:0.8rem; color:var(--ink-500); margin-top:4px;">JPG, PNG or WEBP showing crops, land, or stay spaces</div>
+                  </label>
+                  <div class="upload-preview-grid" id="photoPreviewGrid"></div>
+                </div>
+
+                <div class="form-group full" style="margin-top:6px;">
+                  <button type="submit" class="btn btn-primary" style="width:100%;">Submit Application</button>
+                </div>
+              </div>
+            </form>
+
+            <div class="form-feedback" id="farmerFeedback" role="status"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         WHY FARM CO.?
+         ==================================================================== -->
+    <section class="section section--beige" id="why-us">
+      <div class="container">
+        <div class="reveal" style="max-width:740px;">
+          <span class="eyebrow">Why FARM CO.?</span>
+          <h2 class="section-title">Beyond Farm Visits. An Experience-Led Agriculture Platform.</h2>
+          <p class="section-lead">
+            FARM CO. is not simply a weekend picnic directory or an organic grocery brand. We are building a multi-stakeholder ecosystem where education, sustainability, and rural prosperity reinforce one another.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <div class="diff-box reveal">
+            <span class="eyebrow" style="color:var(--sage-200);">Our Differentiation</span>
+            <h3>Connecting Six Pillars Into One Living Ecosystem</h3>
+            <p style="color:rgba(250,247,240,0.82); font-size:0.95rem;">
+              We design structured, high-trust experiential agriculture so every visit delivers genuine value to visitors and measurable economic dignity to farmers.
+            </p>
+            <ul class="diff-list">
+              <li><span class="diff-check">✓</span><span><strong>Experiential Learning First:</strong> Curriculum-aligned, hands-on soil, seed, and climate literacy.</span></li>
+              <li><span class="diff-check">✓</span><span><strong>Farmer Income Engine:</strong> Direct revenue diversification through tourism, workshops, and stays.</span></li>
+              <li><span class="diff-check">✓</span><span><strong>Climate &amp; Sustainability Focus:</strong> Spotlight on regenerative, water-wise, chemical-free Indian farming.</span></li>
+              <li><span class="diff-check">✓</span><span><strong>Human Connection:</strong> Knowing the hands and stories behind every meal on your table.</span></li>
+            </ul>
+          </div>
+
+          <div class="ecosystem-grid reveal">
+            <div class="eco-card">
+              <div class="eco-num">01</div>
+              <h4>Farmers</h4>
+              <p>Empowered with steady supplemental income, direct visibility, and hosting support.</p>
+            </div>
+            <div class="eco-card">
+              <div class="eco-num">02</div>
+              <h4>Urban Consumers</h4>
+              <p>Reconnect with food origins, slow living, and authentic rural hospitality.</p>
+            </div>
+            <div class="eco-card">
+              <div class="eco-num">03</div>
+              <h4>Schools &amp; Colleges</h4>
+              <p>Outdoor classrooms bringing biology, ecology, and food systems alive.</p>
+            </div>
+            <div class="eco-card">
+              <div class="eco-num">04</div>
+              <h4>Families</h4>
+              <p>Screen-free weekend memories where children learn where food truly grows.</p>
+            </div>
+            <div class="eco-card">
+              <div class="eco-num">05</div>
+              <h4>Corporate Organisations</h4>
+              <p>Digital detox retreats, purposeful team bonding, and grassroots ESG impact.</p>
+            </div>
+            <div class="eco-card">
+              <div class="eco-num">06</div>
+              <h4>Agriculture Educators</h4>
+              <p>Practitioners and agronomists co-creating workshops on composting and biodiversity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         OUR MISSION SECTION
+         ==================================================================== -->
+    <section class="section section--white" id="mission">
+      <div class="container mission-wrap">
+        <div class="mission-media reveal">
+          <img
+            src="https://images.unsplash.com/photo-1695387746293-046b37c3341f?auto=format&fit=crop&w=1500&q=80"
+            alt="Indian farmers cultivating rice seedlings in a paddy field in Madurai, Tamil Nadu"
+          />
+          <div class="mission-caption">
+            Across India, millions of smallholder farmers sustain our cities every day. Knowing their craft is the first step toward valuing their future.
+          </div>
+        </div>
+
+        <div class="reveal">
+          <span class="eyebrow">Our Mission</span>
+          <h2 class="section-title">Farming Is More Than Growing Food. It Is Growing Our Future.</h2>
+          <p style="color:var(--ink-700); margin-bottom:14px;">
+            Cities have grown further away from the soil that feeds them. Children often know food only through supermarket shelves, while farmers carry the weight of climate uncertainty alone.
+          </p>
+          <p style="color:var(--ink-700);">
+            At FARM CO., every visit, seed planted, and conversation across a farm bund helps bridge that divide—turning appreciation into action, education, and real economic support.
+          </p>
+
+          <div class="mission-points">
+            <div class="mission-point">
+              <h4>Support Rural Communities</h4>
+              <p>Keep value circulating within rural households and local ecosystems.</p>
+            </div>
+            <div class="mission-point">
+              <h4>New Farmer Revenue</h4>
+              <p>Create resilient, year-round income from hospitality and education.</p>
+            </div>
+            <div class="mission-point">
+              <h4>Sustainable Agriculture</h4>
+              <p>Champion soil health, native seeds, composting, and climate resilience.</p>
+            </div>
+            <div class="mission-point">
+              <h4>Educate Next Generations</h4>
+              <p>Inspire curiosity, ecological empathy, and respect for farmers in youth.</p>
+            </div>
+            <div class="mission-point">
+              <h4>Reconnect With Nature</h4>
+              <p>Offer restorative outdoor spaces away from urban rush and screens.</p>
+            </div>
+            <div class="mission-point">
+              <h4>Farmer Awareness</h4>
+              <p>Build honest understanding of water, weather, and agricultural realities.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         HOW IT WORKS SECTION
+         ==================================================================== -->
+    <section class="section section--beige" id="how-it-works">
+      <div class="container">
+        <div class="reveal" style="text-align:center; max-width:650px; margin:0 auto;">
+          <span class="eyebrow" style="justify-content:center;">How It Works</span>
+          <h2 class="section-title">From Curiosity to Muddy Boots in Four Simple Steps</h2>
+          <p class="section-lead" style="margin:0 auto;">
+            Whether you are planning a family Sunday, a school field study, or a corporate retreat, our curation team guides every step.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-card reveal">
+            <div class="step-number">01</div>
+            <h3>Discover</h3>
+            <p>Explore available farm experience categories across organic farms, orchards, and rural landscapes.</p>
+          </article>
+          <article class="step-card reveal">
+            <div class="step-number">02</div>
+            <h3>Choose</h3>
+            <p>Select the experience that matches your group—family outing, workshop, rural stay, school trip, or corporate day.</p>
+          </article>
+          <article class="step-card reveal">
+            <div class="step-number">03</div>
+            <h3>Book</h3>
+            <p>Submit your booking enquiry with preferred dates and group size. Our team coordinates directly with host farmers.</p>
+          </article>
+          <article class="step-card reveal">
+            <div class="step-number">04</div>
+            <h3>Experience</h3>
+            <p>Visit the farm, get your hands into the soil, share stories over fresh food, and learn directly from farmers.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SCHOOLS & CORPORATE PARTNERSHIPS SECTION
+         ==================================================================== -->
+    <section class="section section--white" id="for-schools">
+      <div class="container">
+        <div class="reveal" style="max-width:720px;">
+          <span class="eyebrow">Institutional Partnerships</span>
+          <h2 class="section-title">Purposeful Farm Programs for Schools, Colleges &amp; Corporates</h2>
+          <p class="section-lead">
+            Tailored group immersions combining practical ecology, team cohesion, and measurable community support.
+          </p>
+        </div>
+
+        <div class="partners-grid">
+          <!-- Schools & Colleges Card -->
+          <article class="partner-panel reveal">
+            <div class="partner-banner">
+              <img
+                src="https://images.unsplash.com/photo-1609531577197-7aeff32e9e23?auto=format&fit=crop&w=1200&q=80"
+                alt="Butterfly resting on green foliage representing biodiversity education for students"
+              />
+              <span class="partner-tag">Schools &amp; Colleges</span>
+            </div>
+            <div class="partner-content">
+              <h3>School Field Trips &amp; College Agriculture Programs</h3>
+              <p style="color:var(--ink-700); font-size:0.94rem;">
+                Take science, geography, and sustainability beyond textbooks with structured outdoor sessions led alongside practicing farmers.
+              </p>
+              <ul class="partner-bullets">
+                <li><strong>School Field Trips:</strong> Age-tailored farm walks, seed-to-plate stories, soil &amp; pollinator discovery.</li>
+                <li><strong>College Agriculture Programs:</strong> Field exposure to agroforestry, water harvesting, and rural livelihoods.</li>
+                <li><strong>Educational Workshops:</strong> Practical composting, kitchen gardening, and climate-smart agriculture modules.</li>
+              </ul>
+              <div>
+                <button type="button" class="btn btn-primary partnership-cta" data-experience="School & Student Programs">
+                  Partner With FARM CO.
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Corporate Engagement Card -->
+          <article class="partner-panel reveal" id="corporate">
+            <div class="partner-banner">
+              <img
+                src="https://images.unsplash.com/photo-1755227038952-ad89a85e7eef?auto=format&fit=crop&w=1200&q=80"
+                alt="Group gathered outdoors surrounded by lush trees and nature"
+              />
+              <span class="partner-tag">Corporate &amp; ESG</span>
+            </div>
+            <div class="partner-content">
+              <h3>Corporate Employee Engagement &amp; Sustainability Initiatives</h3>
+              <p style="color:var(--ink-700); font-size:0.94rem;">
+                Replace sterile conference rooms with open skies, collaborative farm tasks, and authentic impact for rural partners.
+              </p>
+              <ul class="partner-bullets">
+                <li><strong>Corporate Employee Engagement:</strong> Digital detox days, farm harvest challenges, and authentic rural lunches.</li>
+                <li><strong>Sustainability Initiatives:</strong> Hands-on tree planting, soil restoration days, and biodiversity drives.</li>
+                <li><strong>Leadership &amp; Team Offsites:</strong> Purpose-driven retreats curated within driving distance of Bengaluru.</li>
+              </ul>
+              <div>
+                <button type="button" class="btn btn-earth partnership-cta" data-experience="Corporate Farm Experiences">
+                  Partner With FARM CO.
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CUSTOMER BOOKING ENQUIRY SYSTEM
+         ==================================================================== -->
+    <section class="section section--cream" id="booking">
+      <div class="container booking-layout">
+        <div class="reveal">
+          <span class="eyebrow">Book an Experience</span>
+          <h2 class="section-title">Plan Your Farm Visit or Group Immersion</h2>
+          <p class="section-lead">
+            Submit your preferences below. Every enquiry is personally coordinated by our team with verified host farmers—ensuring safe, authentic, uncrowded experiences.
+          </p>
+
+          <div class="booking-info-cards">
+            <div class="info-mini-card">
+              <h4>Transparent Enquiry Process</h4>
+              <p>We confirm farm availability, seasonal crops, host readiness, and exact pricing directly with you before confirming any visit.</p>
+            </div>
+            <div class="info-mini-card">
+              <h4>Direct WhatsApp Assistance</h4>
+              <p>Prefer chatting directly? Submit the form or start a WhatsApp conversation with your trip details in one click.</p>
+            </div>
+            <div class="info-mini-card">
+              <h4>Rooted in Bengaluru, Growing Across India</h4>
+              <p>Currently curating experiences across Bengaluru's surrounding green belts and partnering with farms statewide.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card reveal">
+          <div class="form-card-header">
+            <h3>Experience Booking Enquiry</h3>
+            <p>Share your preferred dates and group details. We respond within 24 hours.</p>
+          </div>
+
+          <form id="bookingForm" novalidate>
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label" for="custName">Customer Name *</label>
+                <input class="form-control" id="custName" name="custName" type="text" placeholder="Your full name" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="custEmail">Email Address *</label>
+                <input class="form-control" id="custEmail" name="custEmail" type="email" placeholder="you@example.com" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="custPhone">Phone Number *</label>
+                <input class="form-control" id="custPhone" name="custPhone" type="tel" placeholder="10-digit mobile number" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="prefExperience">Preferred Experience *</label>
+                <select class="form-control" id="prefExperience" name="prefExperience" required>
+                  <option value="">Select an experience</option>
+                  <option value="Farm Visits">Farm Visits</option>
+                  <option value="Hands-on Farming">Hands-on Farming</option>
+                  <option value="Farm Workshops">Farm Workshops</option>
+                  <option value="Rural Stays">Rural Stays</option>
+                  <option value="Family Farm Experiences">Family Farm Experiences</option>
+                  <option value="School & Student Programs">School &amp; Student Programs</option>
+                  <option value="Corporate Farm Experiences">Corporate Farm Experiences</option>
+                  <option value="Institutional / Corporate Partnership">Institutional / Corporate Partnership</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="visitorCount">Number of Visitors *</label>
+                <input class="form-control" id="visitorCount" name="visitorCount" type="number" min="1" max="500" placeholder="e.g., 4" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="prefDate">Preferred Date *</label>
+                <input class="form-control" id="prefDate" name="prefDate" type="date" required />
+              </div>
+
+              <div class="form-group full">
+                <label class="form-label" for="prefLocation">Preferred Location / Region *</label>
+                <input class="form-control" id="prefLocation" name="prefLocation" type="text" placeholder="e.g., Bengaluru South, Kanakapura, Coorg, or Anywhere near Bengaluru" required />
+              </div>
+
+              <div class="form-group full">
+                <label class="form-label" for="addRequirements">Additional Requirements (Dietary, Age Group, Accessibility, Goals)</label>
+                <textarea class="form-control" id="addRequirements" name="addRequirements" placeholder="Tell us about children's ages, school grade, team-building goals, or stay preferences..."></textarea>
+              </div>
+
+              <div class="form-group full" style="margin-top:6px;">
+                <button type="submit" class="btn btn-primary" style="width:100%;">Submit Booking Enquiry</button>
+              </div>
+            </div>
+          </form>
+
+          <div class="form-feedback" id="bookingFeedback" role="status"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         ABOUT THE FOUNDER SECTION
+         ==================================================================== -->
+    <section class="section section--beige" id="about">
+      <div class="container">
+        <div class="founder-card reveal">
+          <div class="founder-emblem">
+            <div class="founder-monogram" aria-hidden="true">CV</div>
+            <h3>Chandana V</h3>
+            <div class="founder-role">Founder, FARM CO.</div>
+            <div class="founder-loc">Bengaluru, Karnataka, India</div>
+          </div>
+
+          <div>
+            <span class="eyebrow">About the Founder</span>
+            <h2 class="section-title" style="margin-bottom:8px;">Building a Bridge Back to the Land</h2>
+            <blockquote class="founder-quote">
+              “I believe the future of agriculture depends on the connection between people, farmers and nature. FARM CO. is my initiative to create meaningful farming experiences, empower farmers with new opportunities and inspire people to value the hands that grow our food.”
+            </blockquote>
+            <div class="founder-sig">— Chandana V, Founder, FARM CO.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CONTACT & GOOGLE MAPS INTEGRATION
+         ==================================================================== -->
+    <section class="section section--white" id="contact">
+      <div class="container">
+        <div class="reveal" style="max-width:680px;">
+          <span class="eyebrow">Contact Us</span>
+          <h2 class="section-title">Start a Conversation With FARM CO.</h2>
+          <p class="section-lead">
+            Have questions about visiting a farm, partnering your land, school collaborations, or angel investor &amp; ecosystem partnerships? Reach out directly.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-details-card reveal">
+            <div class="contact-row">
+              <div class="contact-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22v-9"/><path d="M12 13C7 13 4 9.5 4 5c4.5 0 8 3 8 8Z"/><path d="M12 15c5 0 8-3.5 8-8-4.5 0-8 3-8 8Z"/></svg>
+              </div>
+              <div>
+                <small>Company &amp; Founder</small>
+                <strong>FARM CO. · Founded by Chandana V</strong>
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <div class="contact-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <small>Email</small>
+                <a href="mailto:farmco.official@gmail.com">farmco.official@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <div class="contact-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <small>Phone / WhatsApp</small>
+                <a href="tel:+917676380184">+91 7676380184</a>
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <div class="contact-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <small>Headquarters</small>
+                <strong>Bengaluru, Karnataka, India</strong>
+              </div>
+            </div>
+
+            <div style="display:flex; flex-wrap:wrap; gap:12px; padding-top:8px;">
+              <a
+                href="https://wa.me/917676380184?text=Hello%20The%20Farm%20Co.%2C%20I%20would%20like%20to%20enquire%20about%20farm%20experiences."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-whatsapp"
+              >
+                Chat on WhatsApp
+              </a>
+              <a href="mailto:farmco.official@gmail.com?subject=Enquiry%20-%20The%20Farm%20Co." class="btn btn-outline">
+                Send Email
+              </a>
+            </div>
+          </div>
+
+          <div class="form-card reveal" style="box-shadow:var(--shadow-sm);">
+            <div class="form-card-header">
+              <h3>Send a Direct Message</h3>
+              <p>For general enquiries, media, collaborations, or partnership discussions.</p>
+            </div>
+            <form id="contactForm" novalidate>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label class="form-label" for="contactName">Your Name *</label>
+                  <input class="form-control" id="contactName" type="text" placeholder="Full name" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="contactPhoneEmail">Email or Phone *</label>
+                  <input class="form-control" id="contactPhoneEmail" type="text" placeholder="Email or phone number" required />
+                </div>
+                <div class="form-group full">
+                  <label class="form-label" for="contactSubject">Topic</label>
+                  <select class="form-control" id="contactSubject">
+                    <option value="General Enquiry">General Enquiry</option>
+                    <option value="School / College Collaboration">School / College Collaboration</option>
+                    <option value="Corporate Engagement">Corporate Engagement</option>
+                    <option value="Farmer Network Query">Farmer Network Query</option>
+                    <option value="Investment / Ecosystem Partnership">Investment / Ecosystem Partnership</option>
+                  </select>
+                </div>
+                <div class="form-group full">
+                  <label class="form-label" for="contactMsg">Message *</label>
+                  <textarea class="form-control" id="contactMsg" placeholder="How can we collaborate or assist you?" required></textarea>
+                </div>
+                <div class="form-group full">
+                  <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+                </div>
+              </div>
+            </form>
+            <div class="form-feedback" id="contactFeedback" role="status"></div>
+          </div>
+        </div>
+
+        <!-- Google Maps Integration -->
+        <div class="map-card reveal">
+          <div class="map-toolbar">
+            <div>
+              <h3 style="font-size:1.45rem; color:var(--forest-900);">Explore Our Bengaluru Hub &amp; Sample Farm Belts</h3>
+              <p style="font-size:0.86rem; color:var(--ink-500);">Switch regions to preview illustrative agricultural corridors around Karnataka.</p>
+            </div>
+            <div class="map-tabs" id="mapTabs">
+              <button type="button" class="map-tab active" data-query="Bengaluru, Karnataka, India">Bengaluru HQ</button>
+              <button type="button" class="map-tab" data-query="Kanakapura, Karnataka, India">Kanakapura Belt (Example)</button>
+              <button type="button" class="map-tab" data-query="Doddaballapur, Karnataka, India">Doddaballapur Belt (Example)</button>
+              <button type="button" class="map-tab" data-query="Ramanagara, Karnataka, India">Ramanagara Belt (Example)</button>
+            </div>
+          </div>
+          <iframe
+            id="googleMapFrame"
+            class="map-frame"
+            title="FARM CO. Bengaluru and Farm Corridors Map"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=Bengaluru,%20Karnataka,%20India&t=&z=11&ie=UTF8&iwloc=&output=embed"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">FARM CO.</div>
+          <div class="footer-tagline">Inspired by Nature. For Climate. For Our Future.</div>
+          <p style="font-size:0.88rem; max-width:340px;">
+            An experiential farming and agriculture-learning platform connecting urban communities, schools, and corporates with real Indian farmers.
+          </p>
+          <div class="social-row" aria-label="Social Media Links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <ul class="footer-links">
+            <li><a href="#experiences">Farm Experiences</a></li>
+            <li><a href="#for-farmers">For Farmers</a></li>
+            <li><a href="#why-us">Why FARM CO.?</a></li>
+            <li><a href="#mission">Our Mission</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Collaborate</h4>
+          <ul class="footer-links">
+            <li><a href="#for-schools">Schools &amp; Colleges</a></li>
+            <li><a href="#corporate">Corporate Retreats</a></li>
+            <li><a href="#booking">Book an Experience</a></li>
+            <li><a href="#about">About Founder</a></li>
+            <li><button type="button" id="openEnquiryManagerBtn">Enquiry Manager (Local)</button></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Reach Us</h4>
+          <ul class="footer-links">
+            <li>Founder: Chandana V</li>
+            <li><a href="mailto:farmco.official@gmail.com">farmco.official@gmail.com</a></li>
+            <li><a href="tel:+917676380184">+91 7676380184</a></li>
+            <li>Bengaluru, Karnataka, India</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© <span id="yearNow"></span> FARM CO. All rights reserved.</div>
+        <div class="footer-legal">
+          <button type="button" data-modal="privacyModal">Privacy Policy</button>
+          <button type="button" data-modal="termsModal">Terms &amp; Conditions</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a
+    href="https://wa.me/917676380184?text=Hello%20The%20Farm%20Co.!%20I%20would%20like%20to%20know%20more%20about%20your%20farm%20experiences."
+    target="_blank"
+    rel="noopener noreferrer"
+    class="wa-float"
+    aria-label="Enquire on WhatsApp"
+  >
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.79 14.11c-.24.68-1.42 1.3-1.95 1.38-.52.08-1.18.11-1.91-.12-.44-.14-1.01-.33-1.73-.64-3.05-1.32-5.04-4.38-5.19-4.58-.15-.2-1.24-1.65-1.24-3.15 0-1.5.78-2.24 1.06-2.55.28-.31.61-.39.81-.39.2 0 .41 0 .59.01.19.01.44-.07.69.53.26.62.87 2.13.95 2.28.08.15.13.33.03.53-.1.2-.15.33-.3.51-.15.18-.32.4-.45.54-.15.15-.31.31-.13.62.18.31.8 1.32 1.72 2.14 1.18 1.05 2.18 1.38 2.49 1.53.31.15.49.13.67-.08.18-.21.77-.9.98-1.21.21-.31.41-.26.69-.15.28.1 1.78.84 2.09.99.31.15.51.23.59.36.07.13.07.75-.17 1.43z"/>
+    </svg>
+    <span>WhatsApp Us</span>
+  </a>
+
+  <!-- ======================================================================
+       MODALS: PRIVACY POLICY, TERMS & CONDITIONS, LOCAL ENQUIRY MANAGER
+       ====================================================================== -->
+  <div class="modal-backdrop" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
+    <div class="modal-box">
+      <div class="modal-head">
+        <h3 id="privacyTitle">Privacy Policy — FARM CO.</h3>
+        <button class="modal-close" data-close-modal aria-label="Close modal">×</button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Effective Date:</strong> 2026 · <strong>Location:</strong> Bengaluru, Karnataka, India</p>
+        <h4>1. Information We Collect</h4>
+        <p>When you submit a booking enquiry, contact message, or farmer partnership application on FARM CO., we collect the contact and preference details you voluntarily provide (such as name, email, phone number, preferred dates, and farm details).</p>
+        <h4>2. How We Use Your Data</h4>
+        <p>Your information is used solely to coordinate requested farm experiences, evaluate and onboard partner farms, respond to school or corporate partnership requests, and communicate with you via phone, email, or WhatsApp.</p>
+        <h4>3. Data Sharing &amp; Protection</h4>
+        <p>We never sell personal data to third-party marketers. Relevant visitor group details are shared only with confirmed host farmers to ensure safety, hospitality, and preparedness for your visit.</p>
+        <h4>4. Your Rights &amp; Contact</h4>
+        <p>To update or delete your submitted information, please contact Chandana V at <a href="mailto:farmco.official@gmail.com" style="text-decoration:underline;">farmco.official@gmail.com</a> or call +91 7676380184.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="termsModal" role="dialog" aria-modal="true" aria-labelledby="termsTitle">
+    <div class="modal-box">
+      <div class="modal-head">
+        <h3 id="termsTitle">Terms &amp; Conditions — FARM CO.</h3>
+        <button class="modal-close" data-close-modal aria-label="Close modal">×</button>
+      </div>
+      <div class="modal-body">
+        <h4>1. Platform Role &amp; Enquiries</h4>
+        <p>FARM CO. acts as an experiential curation and coordination platform connecting visitors, schools, and organisations with independent partner farms. Submitting a form creates a booking enquiry and does not constitute a confirmed reservation until availability and pricing are confirmed by our team.</p>
+        <h4>2. Sample Listings</h4>
+        <p>Experience cards labeled as sample listings represent curated program formats and indicative regions while our initial partner farm network is onboarded.</p>
+        <h4>3. Farm Etiquette &amp; Safety</h4>
+        <p>Farms are living agricultural environments. Visitors agree to respect crops, soil beds, livestock, farmer privacy, and safety instructions provided on-site by host farmers and facilitators.</p>
+        <h4>4. Farmer Partnerships</h4>
+        <p>Farmers submitting applications confirm they have lawful rights to host visitors on the listed agricultural property and commit to honest, safe, and sustainable practices.</p>
+        <h4>5. Governing Law</h4>
+        <p>These terms are governed by the laws of India, with jurisdiction in Bengaluru, Karnataka.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="enquiryModal" role="dialog" aria-modal="true" aria-labelledby="enquiryModalTitle">
+    <div class="modal-box">
+      <div class="modal-head">
+        <h3 id="enquiryModalTitle">Enquiry &amp; Farmer Application Manager</h3>
+        <button class="modal-close" data-close-modal aria-label="Close modal">×</button>
+      </div>
+      <div class="modal-body">
+        <p style="margin-bottom:14px;">
+          Submissions made on this device are stored securely in browser storage so you can review or export them (ready to connect to a backend API, Airtable, or Formspree endpoint).
+        </p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:18px;">
+          <button type="button" class="btn btn-primary btn-sm" id="exportEnquiriesBtn">Export JSON</button>
+          <button type="button" class="btn btn-outline btn-sm" id="clearEnquiriesBtn">Clear Local Records</button>
+        </div>
+        <div id="enquiryListContainer"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       MODULAR APPLICATION JAVASCRIPT
+       ====================================================================== -->
+  <script>
+    (function () {
+      "use strict";
+const SHEET_API =
+"https://script.google.com/macros/s/AKfycbzq1h8cep-JmItcRoXMfdr-2u3CbrTkuvaREZjx7QMl5xsXIbMkRwTGKW2uX2fwad9J/exec";
+
+
+      /* --------------------------------------------------------------------
+         1. CONFIG & EASY-TO-UPDATE EXPERIENCE LISTINGS
+            Add, edit, or replace listings below—or swap with a CMS/API fetch.
+         -------------------------------------------------------------------- */
+      const WHATSAPP_NUMBER = "917676380184";
+
+      const EXPERIENCES_DATA = [
+        {
+          id: "farm-visits",
+          title: "Farm Visits",
+          category: "hands-on",
+          duration: "Half Day (3–4 Hrs)",
+          sampleLocation: "Example: Kanakapura Road Belt, Karnataka",
+          description: "Explore real working farms, walk alongside growers, understand seasonal cropping cycles, water stewardship, and how food journeys from soil to kitchen.",
+          highlights: ["Guided Farm Walk", "Soil & Crop Tour", "Farmer Q&A"],
+          image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80",
+          alt: "Sunlit green agricultural farmland landscape"
+        },
+        {
+          id: "hands-on-farming",
+          title: "Hands-on Farming",
+          category: "hands-on",
+          duration: "Half / Full Day",
+          sampleLocation: "Example: Doddaballapur Belt, Karnataka",
+          description: "Step directly into the field—prepare nursery beds, sow native seeds, transplant saplings, tend vegetable patches, and harvest fresh produce with your own hands.",
+          highlights: ["Seed Sowing", "Crop Harvesting", "Tool Handling"],
+          image: "https://images.unsplash.com/photo-1744726006622-f31b79d86642?auto=format&fit=crop&w=1200&q=80",
+          alt: "Lush vegetable garden growing in open farmland"
+        },
+        {
+          id: "farm-workshops",
+          title: "Farm Workshops",
+          category: "hands-on",
+          duration: "4–5 Hours",
+          sampleLocation: "Example: Bengaluru Outskirts, Karnataka",
+          description: "Practical learning sessions covering organic composting, natural bio-inputs, seed saving, urban kitchen gardening, and regenerative soil care.",
+          highlights: ["Composting Lab", "Organic Inputs", "Sustainable Methods"],
+          image: "https://images.unsplash.com/photo-1788538812851-9aacd4189fa8?auto=format&fit=crop&w=1200&q=80",
+          alt: "Community participants learning organic farming in raised vegetable beds"
+        },
+        {
+          id: "rural-stays",
+          title: "Rural Stays",
+          category: "family-stays",
+          duration: "1–3 Nights",
+          sampleLocation: "Example: Ramanagara / Malnad Region",
+          description: "Slow down in serene rural farmhouses. Wake up to birdsong, share home-cooked village meals, join morning farm chores, and reconnect with nature's rhythm.",
+          highlights: ["Village Hospitality", "Farm-to-Table Food", "Slow Living"],
+          image: "https://images.unsplash.com/photo-1745746021623-197739bbeb36?auto=format&fit=crop&w=1200&q=80",
+          alt: "Peaceful rural farmhouse surrounded by trees and green fields"
+        },
+        {
+          id: "family-experiences",
+          title: "Family Farm Experiences",
+          category: "family-stays",
+          duration: "Weekend Morning",
+          sampleLocation: "Example: Within 90 Mins of Bengaluru",
+          description: "Meaningful screen-free outdoor adventures designed for parents, children, and grandparents—treasure hunts in orchards, mud-play, and fresh harvest baskets.",
+          highlights: ["Kid-Friendly", "Orchard Trails", "Harvest Activity"],
+          image: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=80",
+          alt: "Fresh farm produce and harvest display for family farm visits"
+        },
+        {
+          id: "school-programs",
+          title: "School & Student Programs",
+          category: "institutions",
+          duration: "Custom Curriculum",
+          sampleLocation: "Example: Partner Learning Farms, Karnataka",
+          description: "Structured agricultural field education for schools and colleges—bringing biology, ecology, climate resilience, and food literacy outside classroom walls.",
+          highlights: ["Safety-First Groups", "Ecology Modules", "College Fieldwork"],
+          image: "https://images.unsplash.com/photo-1609531577197-7aeff32e9e23?auto=format&fit=crop&w=1200&q=80",
+          alt: "Biodiversity and pollinator observation on farm foliage"
+        },
+        {
+          id: "corporate-experiences",
+          title: "Corporate Farm Experiences",
+          category: "institutions",
+          duration: "Full Day Offsite",
+          sampleLocation: "Example: Curated Retreat Farms, Bengaluru",
+          description: "Unplug from laptops for high-trust team building, collaborative farming challenges, sustainability workshops, and authentic rural community immersion.",
+          highlights: ["Digital Detox", "Team Challenges", "ESG Alignment"],
+          image: "https://images.unsplash.com/photo-1755227038952-ad89a85e7eef?auto=format&fit=crop&w=1200&q=80",
+          alt: "Outdoor team gathering amidst lush greenery for corporate farm retreat"
+        }
+      ];
+
+      /* --------------------------------------------------------------------
+         2. RENDER EXPERIENCES + CATEGORY FILTERS
+         -------------------------------------------------------------------- */
+      const experiencesGrid = document.getElementById("experiencesGrid");
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const prefExperienceSelect = document.getElementById("prefExperience");
+
+      function renderExperiences(filter = "all") {
+        const items = filter === "all"
+          ? EXPERIENCES_DATA
+          : EXPERIENCES_DATA.filter((item) => item.category === filter);
+
+        experiencesGrid.innerHTML = items.map((exp) => `
+          <article class="exp-card">
+            <div class="exp-media">
+              <img src="${exp.image}" alt="${exp.alt}" loading="lazy" />
+              <div class="exp-badge-row">
+                <span class="exp-sample-pill">Sample Listing</span>
+                <span class="exp-duration-pill">${exp.duration}</span>
+              </div>
+            </div>
+            <div class="exp-body">
+              <div class="exp-meta">${exp.sampleLocation}</div>
+              <h3 class="exp-title">${exp.title}</h3>
+              <p class="exp-desc">${exp.description}</p>
+              <div class="exp-highlights">
+                ${exp.highlights.map((tag) => `<span class="exp-chip">${tag}</span>`).join("")}
+              </div>
+              <div class="exp-footer">
+                <span class="exp-loc">Onboarding Partner Farms</span>
+                <button type="button" class="btn btn-primary btn-sm book-exp-btn" data-exp="${exp.title}">
+                  Enquire / Book
+                </button>
+              </div>
+            </div>
+          </article>
+        `).join("");
+
+        // Wire card CTA buttons to booking form
+        document.querySelectorAll(".book-exp-btn").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            selectExperienceAndScroll(btn.getAttribute("data-exp"));
+          });
+        });
+      }
+
+      function selectExperienceAndScroll(experienceName) {
+        if (prefExperienceSelect) {
+          prefExperienceSelect.value = experienceName;
+        }
+        const bookingSection = document.getElementById("booking");
+        bookingSection.scrollIntoView({ behavior: "smooth" });
+        setTimeout(() => {
+          document.getElementById("custName").focus();
+        }, 500);
+      }
+
+      filterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filterButtons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          renderExperiences(btn.getAttribute("data-filter"));
+        });
+      });
+
+      document.querySelectorAll(".partnership-cta").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          selectExperienceAndScroll(btn.getAttribute("data-experience"));
+        });
+      });
+
+      renderExperiences("all");
+
+      /* --------------------------------------------------------------------
+         3. STICKY HEADER, MOBILE DRAWER & SCROLL REVEAL
+         -------------------------------------------------------------------- */
+      const header = document.getElementById("siteHeader");
+      const mobileToggle = document.getElementById("mobileToggle");
+      const mobileDrawer = document.getElementById("mobileDrawer");
+
+      window.addEventListener("scroll", () => {
+        header.classList.toggle("scrolled", window.scrollY > 40);
+      }, { passive: true });
+
+      function toggleDrawer(forceClose = false) {
+        const isOpen = forceClose ? false : !mobileDrawer.classList.contains("open");
+        mobileDrawer.classList.toggle("open", isOpen);
+        mobileToggle.setAttribute("aria-expanded", String(isOpen));
+        mobileDrawer.setAttribute("aria-hidden", String(!isOpen));
+        document.body.style.overflow = isOpen ? "hidden" : "";
+      }
+
+      mobileToggle.addEventListener("click", () => toggleDrawer());
+      document.querySelectorAll(".mobile-link, #mobileBookBtn").forEach((link) => {
+        link.addEventListener("click", () => toggleDrawer(true));
+      });
+
+      // Scroll Reveal Observer
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+
+      /* --------------------------------------------------------------------
+         4. FARMER PHOTO UPLOAD PREVIEWS & FOCUS BUTTON
+         -------------------------------------------------------------------- */
+      const farmPhotosInput = document.getElementById("farmPhotos");
+      const uploadDropzone = document.getElementById("uploadDropzone");
+      const photoPreviewGrid = document.getElementById("photoPreviewGrid");
+      let uploadedPhotos = [];
+
+      function handleFiles(fileList) {
+        const files = Array.from(fileList).slice(0, 5);
+        photoPreviewGrid.innerHTML = "";
+        uploadedPhotos = [];
+
+        files.forEach((file, index) => {
+          if (!file.type.startsWith("image/")) return;
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            const photoObj = {
+              name: file.name,
+              type: file.type,
+              dataUrl: e.target.result
+            };
+            uploadedPhotos.push(photoObj);
+
+            const div = document.createElement("div");
+            div.className = "upload-thumb";
+            div.innerHTML = `
+              <img src="${e.target.result}" alt="Uploaded farm photo ${index + 1}" />
+              <button type="button" title="Remove photo" aria-label="Remove photo">×</button>
+            `;
+            div.querySelector("button").addEventListener("click", () => {
+              div.remove();
+              uploadedPhotos = uploadedPhotos.filter((p) => p !== photoObj);
+            });
+            photoPreviewGrid.appendChild(div);
+          };
+          reader.readAsDataURL(file);
+        });
+      }
+
+      farmPhotosInput.addEventListener("change", (e) => handleFiles(e.target.files));
+
+      uploadDropzone.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        uploadDropzone.classList.add("dragover");
+      });
+      uploadDropzone.addEventListener("dragleave", () => uploadDropzone.classList.remove("dragover"));
+      uploadDropzone.addEventListener("drop", (e) => {
+        e.preventDefault();
+        uploadDropzone.classList.remove("dragover");
+        handleFiles(e.dataTransfer.files);
+      });
+
+      document.getElementById("focusFarmerFormBtn").addEventListener("click", () => {
+        document.getElementById("farmerFormCard").scrollIntoView({ behavior: "smooth" });
+        setTimeout(() => document.getElementById("farmerName").focus(), 450);
+      });
+
+      /* --------------------------------------------------------------------
+         5. ENQUIRY STORAGE & GOOGLE SHEETS SUBMISSION HANDLERS
+         -------------------------------------------------------------------- */
+      const STORAGE_KEY = "the_farm_co_submissions_v1";
+
+      function getRecords() {
+        try {
+          return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+        } catch {
+          return [];
+        }
+      }
+
+      function saveRecord(record) {
+        const records = getRecords();
+        records.unshift({ ...record, id: Date.now(), createdAt: new Date().toLocaleString("en-IN") });
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(records));
+      }
+
+      // Sends form payload to Google Apps Script Web App
+      async function sendToGoogleSheets(payload) {
+        if (!SHEET_API) return;
+        try {
+          await fetch(SHEET_API.trim(), {
+            method: "POST",
+            mode: "no-cors", // Required for Google Apps Script cross-origin POSTs
+            headers: {
+              "Content-Type": "text/plain;charset=utf-8"
+            },
+            body: JSON.stringify(payload)
+          });
+        } catch (err) {
+          console.error("Google Sheets sync error:", err);
+        }
+      }
+
+      function sanitizePhone(phone) {
+        return phone.replace(/\D/g, "");
+      }
+
+      function showFeedback(el, html, isError = false) {
+        el.innerHTML = html;
+        el.style.background = isError ? "#FDECEC" : "#E6F2EA";
+        el.style.borderColor = isError ? "#E3A0A0" : "#9EC7AD";
+        el.style.color = isError ? "#6E1E1E" : "#173325";
+        el.classList.add("show");
+      }
+
+      // Set minimum date for booking date picker to today
+      const prefDateInput = document.getElementById("prefDate");
+      const todayISO = new Date().toISOString().split("T")[0];
+      prefDateInput.setAttribute("min", todayISO);
+
+      // A. Farmer Registration Submission
+      const farmerForm = document.getElementById("farmerRegistrationForm");
+      const farmerFeedback = document.getElementById("farmerFeedback");
+
+      farmerForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const name = document.getElementById("farmerName").value.trim();
+        const phone = document.getElementById("farmerPhone").value.trim();
+        const location = document.getElementById("farmLocation").value.trim();
+        const size = document.getElementById("farmSize").value.trim();
+        const type = document.getElementById("farmingType").value;
+        const activities = Array.from(document.querySelectorAll("#farmerActivities input:checked")).map((c) => c.value);
+
+        if (!name || sanitizePhone(phone).length < 10 || !location || !size || !type) {
+          showFeedback(farmerFeedback, "<strong>Please complete all required fields</strong> including a valid 10-digit phone number, location, farm size, and farming type.", true);
+          return;
+        }
+        if (activities.length === 0) {
+          showFeedback(farmerFeedback, "<strong>Select at least one activity</strong> your farm can host for visitors.", true);
+          return;
+        }
+
+        const submitBtn = farmerForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Submitting...";
+
+        const recordForLocal = {
+          recordType: "Farmer Registration",
+          name,
+          phone,
+          location,
+          farmSize: size,
+          farmingType: type,
+          activities,
+          photosCount: uploadedPhotos.length
+        };
+
+        const recordForSheet = {
+          ...recordForLocal,
+          photos: uploadedPhotos
+        };
+
+        saveRecord(recordForLocal);
+        await sendToGoogleSheets(recordForSheet);
+
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+
+        const waMsg = encodeURIComponent(
+          `Namaste Farm Co., I am registering my farm.\nFarmer: ${name}\nPhone: ${phone}\nLocation: ${location}\nSize: ${size}\nType: ${type}\nActivities: ${activities.join(", ")}`
+        );
+
+        showFeedback(
+          farmerFeedback,
+          `<strong>Application Received! Thank you, ${name}.</strong><br/>
+          Your farm partnership application for <em>${location}</em> has been recorded. Our onboarding team will call you at <strong>${phone}</strong> shortly.<br/>
+          <a href="https://wa.me/${WHATSAPP_NUMBER}?text=${waMsg}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm" style="margin-top:12px;">
+            Also Send Application on WhatsApp
+          </a>`
+        );
+
+        farmerForm.reset();
+        photoPreviewGrid.innerHTML = "";
+        uploadedPhotos = [];
+      });
+
+      // B. Customer Booking Enquiry Submission
+      const bookingForm = document.getElementById("bookingForm");
+      const bookingFeedback = document.getElementById("bookingFeedback");
+
+      bookingForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const name = document.getElementById("custName").value.trim();
+        const email = document.getElementById("custEmail").value.trim();
+        const phone = document.getElementById("custPhone").value.trim();
+        const experience = document.getElementById("prefExperience").value;
+        const visitors = document.getElementById("visitorCount").value;
+        const date = document.getElementById("prefDate").value;
+        const location = document.getElementById("prefLocation").value.trim();
+        const requirements = document.getElementById("addRequirements").value.trim();
+
+        const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+        if (!name || !emailValid || sanitizePhone(phone).length < 10 || !experience || !visitors || !date || !location) {
+          showFeedback(bookingFeedback, "<strong>Please fill in all required booking fields</strong> with a valid email address and 10-digit phone number.", true);
+          return;
+        }
+
+        const submitBtn = bookingForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Submitting...";
+
+        const record = {
+          recordType: "Booking Enquiry",
+          name,
+          email,
+          phone,
+          experience,
+          visitors,
+          preferredDate: date,
+          location,
+          requirements: requirements || "None specified"
+        };
+
+        saveRecord(record);
+        await sendToGoogleSheets(record);
+
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+
+        const waMsg = encodeURIComponent(
+          `Hello FARM CO., I submitted a booking enquiry:\nName: ${name}\nExperience: ${experience}\nVisitors: ${visitors}\nDate: ${date}\nLocation: ${location}\nPhone: ${phone}\nNotes: ${requirements || "N/A"}`
+        );
+
+        showFeedback(
+          bookingFeedback,
+          `<strong>Enquiry Submitted Successfully!</strong><br/>
+          Thank you, <strong>${name}</strong>. Your request for <strong>${experience}</strong> (${visitors} visitor(s) on ${date}) has been received. Note: availability is confirmed after direct coordination with our partner farm.<br/>
+          <a href="https://wa.me/${WHATSAPP_NUMBER}?text=${waMsg}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm" style="margin-top:12px;">
+            Fast-Track via WhatsApp
+          </a>`
+        );
+
+        bookingForm.reset();
+      });
+
+      // C. General Contact Form Submission
+      const contactForm = document.getElementById("contactForm");
+      const contactFeedback = document.getElementById("contactFeedback");
+
+      contactForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const name = document.getElementById("contactName").value.trim();
+        const contact = document.getElementById("contactPhoneEmail").value.trim();
+        const topic = document.getElementById("contactSubject").value;
+        const message = document.getElementById("contactMsg").value.trim();
+
+        if (!name || !contact || !message) {
+          showFeedback(contactFeedback, "<strong>Please complete your name, contact info, and message.</strong>", true);
+          return;
+        }
+
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
+
+        const record = {
+          recordType: "Contact Message",
+          name,
+          contact,
+          topic,
+          message
+        };
+
+        saveRecord(record);
+        await sendToGoogleSheets(record);
+
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+
+        showFeedback(
+          contactFeedback,
+          `<strong>Message Sent!</strong> Thank you, ${name}. Chandana V & FARM CO. team will respond to <strong>${contact}</strong> shortly.`
+        );
+        contactForm.reset();
+      });      /* --------------------------------------------------------------------
+         6. GOOGLE MAPS REGION SWITCHER
+         -------------------------------------------------------------------- */
+      const mapFrame = document.getElementById("googleMapFrame");
+      document.querySelectorAll(".map-tab").forEach((tab) => {
+        tab.addEventListener("click", () => {
+          document.querySelectorAll(".map-tab").forEach((t) => t.classList.remove("active"));
+          tab.classList.add("active");
+          const query = encodeURIComponent(tab.getAttribute("data-query"));
+          mapFrame.src = `https://maps.google.com/maps?q=${query}&t=&z=11&ie=UTF8&iwloc=&output=embed`;
+        });
+      });
+
+      /* --------------------------------------------------------------------
+         7. MODALS (PRIVACY, TERMS, LOCAL ENQUIRY MANAGER)
+         -------------------------------------------------------------------- */
+      function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          modal.classList.add("open");
+          document.body.style.overflow = "hidden";
+        }
+      }
+
+      function closeAllModals() {
+        document.querySelectorAll(".modal-backdrop.open").forEach((m) => m.classList.remove("open"));
+        document.body.style.overflow = "";
+      }
+
+      document.querySelectorAll("[data-modal]").forEach((trigger) => {
+        trigger.addEventListener("click", () => openModal(trigger.getAttribute("data-modal")));
+      });
+
+      document.querySelectorAll("[data-close-modal]").forEach((btn) => {
+        btn.addEventListener("click", closeAllModals);
+      });
+
+      document.querySelectorAll(".modal-backdrop").forEach((backdrop) => {
+        backdrop.addEventListener("click", (e) => {
+          if (e.target === backdrop) closeAllModals();
+        });
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeAllModals();
+      });
+
+      // Local Enquiry Manager Rendering
+      const enquiryListContainer = document.getElementById("enquiryListContainer");
+      function renderEnquiryManager() {
+        const records = getRecords();
+        if (records.length === 0) {
+          enquiryListContainer.innerHTML = `<p style="color:var(--ink-500);">No enquiries or farmer registrations have been submitted in this browser yet.</p>`;
+          return;
+        }
+        enquiryListContainer.innerHTML = records.map((r) => `
+          <div class="enquiry-record">
+            <div style="display:flex; justify-content:space-between; gap:8px; margin-bottom:6px;">
+              <strong style="color:var(--forest-900);">${r.recordType} — ${r.name}</strong>
+              <small style="color:var(--ink-500);">${r.createdAt}</small>
+            </div>
+            <div style="font-size:0.86rem; color:var(--ink-700);">
+              ${Object.entries(r)
+                .filter(([k]) => !["id", "createdAt", "recordType", "name"].includes(k))
+                .map(([k, v]) => `<div><strong>${k}:</strong> ${Array.isArray(v) ? v.join(", ") : v}</div>`)
+                .join("")}
+            </div>
+          </div>
+        `).join("");
+      }
+
+      document.getElementById("openEnquiryManagerBtn").addEventListener("click", () => {
+        renderEnquiryManager();
+        openModal("enquiryModal");
+      });
+
+      document.getElementById("exportEnquiriesBtn").addEventListener("click", () => {
+        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(getRecords(), null, 2));
+        const a = document.createElement("a");
+        a.setAttribute("href", dataStr);
+        a.setAttribute("download", "farm-co-enquiries.json");
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+      });
+
+      document.getElementById("clearEnquiriesBtn").addEventListener("click", () => {
+        localStorage.removeItem(STORAGE_KEY);
+        renderEnquiryManager();
+      });
+
+      // Footer Copyright Year
+      document.getElementById("yearNow").textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
